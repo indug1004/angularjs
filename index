@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+angular.module("myapp",[])
+.controller('myctrl',['$scope',function($scope){
+$scope.a=10;
+$scope.b=20;
+$scope.name="indu";
+}]);
+
+</script>
+
+<body>
+
+<div ng-app="myapp">
+  <p>Name : <input type="text" ng-model="name"></p>
+  <h1>Hello {{name}}</h1>
+  <div ng-controller="myctrl">
+  Value of a is {{a}} <br>
+  Value of b is {{b}} <br>
+  <hr>
+  value of a is <span ng-bind="a"></span> <br>
+
+  value of a is <span ng-bind="b"></span> <br>
+  </div>
+</div>
+
+</body>
+</html>
