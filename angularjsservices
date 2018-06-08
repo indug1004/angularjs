@@ -1,0 +1,29 @@
+angular.module("myapp",[])
+.controller('myctrl',['$scope','$http' function($scope,$http){
+$http.get("welcome.htm").then(function (response) {
+        $scope.myWelcome = response.data;
+    });
+}]);
+
+angular.module("myapp",[])
+.controller('myctrl',['$scope' function($scope,calFactory){
+calFactory.dosum();
+})
+.factory('calFactory',function(){
+var ocalFactoryservice={};
+ocalFactory.dosum=function(){
+};
+return ocalFactoryservice;
+
+}]);
+
+
+angular.module("myapp",[])
+.controller('myctrl',['$scope' function($scope,calService){
+calService.dosum();
+})
+.service('calService',function(){
+this.dosum=function(){
+};
+
+}]);
