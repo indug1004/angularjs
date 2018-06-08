@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+angular.module("myapp",[])
+.controller('myctrl',['$scope','$http' function($scope,$http){
+$scope.dosum= function(){
+$http.get({
+
+}).then(function(resp){
+},function(resp){
+});
+};
+}]);
+</script>
+<body>
+
+<div ng-app="myapp">
+ 
+<div ng-controller="myctrl">
+
+</div>
+
+</div>
+
+</body>
+</html>
