@@ -7,6 +7,11 @@ angular.module("myapp",[])
 $scope.a=10;
 $scope.b=20;
 $scope.name="indu";
+$scope.dosumdouble=function(){
+$scope.a=$scope.a*2;
+$scope.b=$scope.b*2;
+$scope.sum=parseInt($scope.a)+parseInt($scope.b);
+};
 }]);
 
 </script>
@@ -22,7 +27,15 @@ $scope.name="indu";
   <hr>
   value of a is <span ng-bind="a"></span> <br>
 
-  value of a is <span ng-bind="b"></span> <br>
+  value of b is <span ng-bind="b"></span> <br>
+  <hr>
+  <button ng-click="dosumdouble()">Double</button>
+  <br>
+  Initial value of a is {{::a}}
+  <br>
+  Twoway binding 
+  <input type="number"  ng-model="a"></input>
+  {{a}}
   </div>
 </div>
 
