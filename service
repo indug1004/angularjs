@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+  <script type="text/javascript">
+  //root scope
+  //the scope available at module level
+
+  var sample = angular.module("sample", [])
+  .controller('myctrl',['$scope','empService',function($scope,empService){
+  
+  }])
+  .service('empService',['$http','$log',function($http,$log){
+  this.finfEmpdetailsbyId=function(empno,cb){
+  $http({
+  url:
+  mrthod:
+  }).then(function(resp){
+  cb(resp.data);
+  },function(resp){
+  $log.error("error);
+  debugger;
+  });
+  };
+  }]);
+
+  </script>
+</head>
+<body ng-app="sample">
+  <div ng-controller="myctrl">
+    
+  </div>
+</body>
+</html>
